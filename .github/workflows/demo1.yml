@@ -1,1 +1,19 @@
-name
+name: my first github jobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "hello hiqode"
+
+      - name: list files
+        run: ls -la
+
+      - name: print version
+        run: git --version
